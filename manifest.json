@@ -1,0 +1,17 @@
+{
+    "name": "Jira Dashboard Enhancer",
+    "description": "Update the Jira dashboard to improve the performance of filtering",
+    "version": "1.0",
+    "permissions": [
+        "activeTab"
+    ],
+    "content_scripts": [
+        {
+        "matches": [
+            "https://{{ADD YOUR JIRA HOSTNAME HERE}}/secure/RapidBoard.jspa?rapidView=*"
+        ],
+        "js": ["src/js/thirdParty/jquery-3.4.1.slim.min.js", "src/js/enhancer.user.js"]
+        }
+    ],
+    "manifest_version": 2
+}
